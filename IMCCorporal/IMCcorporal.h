@@ -10,11 +10,17 @@ namespace imc
 
 	std::string pedirApellido();
 
-	std::uint16_t pedirEdad();
+	std::uint8_t pedirEdad();
 
-	std::uint16_t validacionEdad();
+	std::uint8_t validacionEdad();
 
 	void limpiezaBuffer();
+
+	double factorMasaCorporal(std::uint16_t peso, double altura);
+
+	double validacionAltura();
+
+	std::uint16_t validacionPeso();
 
 };
 
