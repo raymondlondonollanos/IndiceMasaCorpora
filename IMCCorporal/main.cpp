@@ -1,6 +1,8 @@
 #include <iostream>
 #include <string>
 #include "IMCcorporal.h"
+#include <Windows.h>
+#include <cstdint>
 
 int main()
 {
@@ -15,6 +17,8 @@ int main()
 	std::uint16_t peso{ imc::validacionPeso() };
 
 	double imc{imc::factorMasaCorporal( peso,altura)};
+
+	//imc::clear_screen();
 
 	std::cout << "Mostrar informacion \n";
 	std::cout << "Nombre: " << nombre <<'\n';

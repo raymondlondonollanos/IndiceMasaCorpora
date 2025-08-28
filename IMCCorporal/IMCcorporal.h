@@ -2,6 +2,8 @@
 #ifndef IMC_H
 #define IMC_H
 #include <string>
+#include <cstdint>
+ 
 
 namespace imc
 {
@@ -21,6 +23,8 @@ namespace imc
 	double validacionAltura();
 
 	std::uint16_t validacionPeso();
+
+	
 
 };
 
