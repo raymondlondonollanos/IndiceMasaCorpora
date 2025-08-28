@@ -3,7 +3,7 @@
 #define IMC_H
 #include <string>
 #include <cstdint>
- 
+
 
 namespace imc
 {
@@ -24,8 +24,9 @@ namespace imc
 
 	std::uint16_t validacionPeso();
 
-	
+	void escalaIMC(int faMaCorporal);
 
+	void clear_screen();
 };
 
 #endif

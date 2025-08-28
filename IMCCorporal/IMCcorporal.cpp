@@ -2,8 +2,8 @@
 #include <string>
 #include "IMCcorporal.h"
 #include <limits>
-#include <windows.h>
 #include <cstdint>
+#include <stdlib.h>
 
 namespace imc
 {
@@ -138,7 +138,7 @@ namespace imc
 			{
 				std::cout << "El peso no puede ser negativo. Intenta de nuevo.\n";
 			}
-			else if (peso > std::numeric_limits<std::uint16_t>::max()) 
+			else if (peso > std::numeric_limits<std::int16_t>::max()) 
 			{
 				std::cout << "El peso excede el límite permitido. Intenta de nuevo.\n";
 			}
@@ -149,4 +149,30 @@ namespace imc
 			}
 		}
 	}
+
+	void escalaIMC(int faMaCorporal)
+	{
+		if (faMaCorporal <1850)
+		{
+			std::cout << "Bajo peso\n";
+		}
+		else if (1850 >= faMaCorporal && faMaCorporal< 2490)
+		{
+			std::cout << "Peso normal\n";
+		}
+		else if (250 >= faMaCorporal && faMaCorporal < 2990)
+		{
+			std::cout << "Sobrepeso\n";
+		}
+		else
+		{
+			std::cout << "Obesidad\n";
+		}
+	}
+
+	void clear_screen() {
+		std::system("cls"); // tradicional en Windows
+	}
+
+
 }

@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include "IMCcorporal.h"
-#include <Windows.h>
 #include <cstdint>
+#include <stdlib.h>
 
 int main()
 {
@@ -18,7 +18,10 @@ int main()
 
 	double imc{imc::factorMasaCorporal( peso,altura)};
 
-	//imc::clear_screen();
+	std::cout << "Presiona ENTER para limpiar...";
+	std::cin.get();
+
+	imc::clear_screen();
 
 	std::cout << "Mostrar informacion \n";
 	std::cout << "Nombre: " << nombre <<'\n';
@@ -27,6 +30,10 @@ int main()
 	std::cout << "Altura ingresada: " << altura << '\n';
 	std::cout << "Peso Ingresado: " << peso << '\n';
 	std::cout << "Indice de masa corporal: " << imc << '\n';
+
+	int imcInt{ static_cast<int>(imc * 10) };
+	imc::escalaIMC(imcInt);
+
 
 	//std::cout << +edad;
 
